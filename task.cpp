@@ -19,6 +19,7 @@ struct AsyncContext {
     int32_t task_id;
 };
 
+// Task定义成智能指针，减小添加任务、取任务等过程的复制开销
 struct Task {
     std::shared_ptr<AsyncContext> real_task;
 };
